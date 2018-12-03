@@ -13,29 +13,31 @@ import com.redhat.model.ToDo;
 
 public class ToDoController {
 	
-	private List<Task> tasks = new ArrayList<Task>();
+	private List<TaskController> tasks = new ArrayList<TaskController>();
 	
 	public ToDoController() {}
 	
 	public ToDoController(ToDo todo) {
-		this.tasks = todo.getTasks();
+		for (Task task : todo.getTasks()) {
+			this.tasks.add(new TaskController(task));
+		}
 	}
 	
-	public List<Task> getTasks() {
+	public List<TaskController> getTasks() {
 		return tasks;
 	}
 
-	public void setTasks(List<Task> tasks) {
+	public void setTasks(List<TaskController> tasks) {
 		this.tasks = tasks;
 	}
 	
-	public void addTask(Task task) {
+	public void addTask(TaskController task) {
 		this.tasks.add(task);
 	}
 	
 	public void addTask() throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		Task task = new Task();
+		TaskController task = new TaskController();
 		System.out.print("Title of the task: ");
 		task.setTitle(reader.readLine());
 		System.out.print("Start day (yyyy-MM-dd): ");
@@ -51,15 +53,11 @@ public class ToDoController {
 		addTask(task);
 	}
 	
-	public void listTasks() {
-		
-	}
-	
-	public Task checkTask() throws NumberFormatException, IOException {
+	public TaskController checkTask() throws NumberFormatException, IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Informe the task id: ");
 		int id = Integer.parseInt(reader.readLine());
-		for (Task task : tasks) {
+		for (TaskController task : tasks) {
 			if(task.getId() == id) {
 				return task;
 			}
@@ -67,12 +65,12 @@ public class ToDoController {
 		return null;
 	}
 	
-	public void removeTask(Task task) {
+	public void removeTask(TaskController task) {
 		this.tasks.remove(task);
 	}
 	
 	public void removeTask() throws NumberFormatException, IOException {
-		Task task = this.checkTask();
+		TaskController task = this.checkTask();
 		this.removeTask(task);
 	}
 	
@@ -83,7 +81,7 @@ public class ToDoController {
 	@Override
 	public String toString() {
 		String todo = "ToDoController {\n";
-		for (Task task : tasks) {
+		for (TaskController task : tasks) {
 			todo = todo.concat(task.toString() + "\n");
 		}
 		todo = todo.concat("}");
@@ -91,7 +89,11 @@ public class ToDoController {
 	}
 	
 	public ToDo toTodo() {
-		ToDo todo = new ToDo(this.tasks);
+		List<Task> task = new ArrayList<Task>();
+		for (TaskController taskController : this.tasks) {
+			task.add(taskController.toTask());
+		}
+		ToDo todo = new ToDo(task);
 		return todo;
 	}
 }

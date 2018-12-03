@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
-import com.redhat.model.Task;
 
 /**
  * 
@@ -20,7 +20,7 @@ public class Main {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int opt = 1;
 		while(opt > 0) {
-			System.out.println("Escolha uma opção: ");
+			System.out.println("Choose an option: ");
 			System.out.println("1 - Include a task");
 			System.out.println("2 - Verify a task");
 			System.out.println("3 - Remove a task");
@@ -44,7 +44,7 @@ public class Main {
 				break;
 			case 2:
 				try {
-					Task t = todoList.checkTask();
+					TaskController t = todoList.checkTask();
 					System.out.println(t.toString());
 				} catch (NumberFormatException | IOException | NullPointerException e) {
 					System.out.println("Error to found the task " + 
@@ -60,7 +60,7 @@ public class Main {
 				}
 				break;
 			case 4:
-				List<Task> tasks = todoList.getTasks();
+				List<TaskController> tasks = todoList.getTasks();
 				System.out.println("Tasks {" + tasks.toString() + "}");
 				break;
 			case 5:
@@ -68,7 +68,7 @@ public class Main {
 				break;
 			default:
 				if(opt > 0) {
-					System.out.println("Optção " + opt +" invalida!");
+					System.out.println("Invalid option " + opt + " !");
 				}
 			}
 		}

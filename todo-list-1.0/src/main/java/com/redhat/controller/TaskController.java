@@ -1,12 +1,11 @@
-package com.redhat.model;
+package com.redhat.controller;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Task implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+import com.redhat.model.Task;
+
+public class TaskController {
 	
 	private static int total = 0;
 	
@@ -17,12 +16,18 @@ public class Task implements Serializable {
 	private String description;
 	
 	
-	public Task() {
+	public TaskController() {
 		this.id = total;
 		total++;
 	}
 	
-	public Task(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
+	public TaskController(Task task) {
+		this(task.getStartDay(), task.getFinalDay(), task.getStartTime(),
+				task.getFinalTime(), task.getTitle(), task.getDescription());
+	}
+	
+
+	public TaskController(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
 			LocalTime finalTime, String title, String description) {
 		this();
 		this.startDay = startDay;
@@ -93,7 +98,13 @@ public class Task implements Serializable {
 	public String toString() {
 		return "Task [Id=" + id + ", titile=" + this.title + ", From=" + this.startDay + 
 				" " + this.startTime + ", to=" + this.finalDay + " " + 
-				this.finalTime + ", description=" + this.description + "]";
+				this.finalTime + ", description=" + this.description + "]\n";
 	}
 	
+	public Task toTask(){
+		Task t = new Task(this.startDay, this.finalDay, this.startTime, 
+				this.finalTime, this.title, this.description);
+		t.setId(this.getId());
+		return t;
+	}
 }
