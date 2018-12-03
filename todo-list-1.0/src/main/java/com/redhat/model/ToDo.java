@@ -38,11 +38,11 @@ public class ToDo implements Serializable {
 	
 	@Override
 	public String toString() {
-		String todo = "ToDo task list {\n";
+		String todo = "ToDo {\n";
 		for (Task task : tasks) {
-			todo.concat(task.toString() + "\n");
+			todo = todo.concat(task.toString() + "\n");
 		}
-		todo.concat("{");
+		todo = todo.concat("}");
 		return todo;
 	}
 }

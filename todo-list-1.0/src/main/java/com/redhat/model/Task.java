@@ -8,16 +8,19 @@ public class Task implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	private static int id = 0;
+	
 	private LocalDate startDay, finalDay;
 	private LocalTime startTime, finalTime;
 	private String title;
 	private String description;
 	
 	
-	public Task() {}
+	public Task() {id++;}
 	
 	public Task(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
 			LocalTime finalTime, String title, String description) {
+		id++;
 		this.startDay = startDay;
 		this.finalDay = finalDay;
 		this.startTime = startTime;
@@ -74,9 +77,13 @@ public class Task implements Serializable {
 		this.description = description;
 	}
 	
+	public int getId() {
+		return id;
+	}
+	
 	@Override
 	public String toString() {
-		return "Task [Titile=" + this.title + ", From=" + this.startDay + 
+		return "Task [Id=" + id + ", titile=" + this.title + ", From=" + this.startDay + 
 				" " + this.startTime + ", to=" + this.finalDay + " " + 
 				this.finalTime + ", description=" + this.description + "]";
 	}

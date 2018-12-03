@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat</groupId>
-	<artifactId>todo-list</artifactId>
+	<artifactId>todo-list-1.0</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>Simple webapp</name>
