@@ -11,7 +11,7 @@ How the application can be changed with the project growing, the description of 
 
 ### Version 1.0
 
-The initial project consisting of a ToDo list without any notification, the user can add, remove or check a task, list all tasks and clean all ToDo list.
+The initial project consisting of a ToDo list using MVC pattern and without any notification, the user can add, remove or check a task, list all tasks and clean all ToDo list.
 
 - In this version the only technology used is Java EE, because that this version does't have a persistence method (it will be implemented in a new version future).
 - In this version the application don't have a GUI, is used only by terminal.
