@@ -3,11 +3,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat</groupId>
-	<artifactId>todo-list-1.0</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0</version>
-	<name>Simple webapp</name>
-	<description>The bare minimum for a functional webapp.</description>
+	<artifactId>todo-list</artifactId>
+	<packaging>war</packaging>
+	<version>2.0</version>
+	<name>ToDo List</name>
+	<description>A simple ToDo list web based.</description>
 	<url>https://github.com/mkspcd/MavenArchetypes</url>
 
 	<dependencies>
