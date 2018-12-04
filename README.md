@@ -18,8 +18,9 @@ The initial project consisting of a ToDo list using MVC pattern and without any 
 
 ### Version 2.0
 
-The second version keeps the same scope of the previos version, 1.0, but include a deployment to Red Hat EAP 7.1 and a web based GUI.
+The second version keeps the same scope of the previos version, 1.0, but include a deployment to Red Hat EAP 7.1 and a web based GUI. To do this deploy a new git repo was created, this new repo has all needed to deploy this application in the Red Hat EAP 7.1.
 
+- Create a new repo with "how to" deploy this application in an Red Hat EAP 7.1
 - Web GUI with JSP
 - Deploy to an standalone Red Hat EAP-7.1
 
