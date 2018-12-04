@@ -16,6 +16,13 @@ The initial project consisting of a ToDo list using MVC pattern and without any 
 - In this version the only technology used is Java EE, because that this version does't have a persistence method (it will be implemented in a new version future).
 - In this version the application don't have a GUI, is used only by terminal.
 
+### Version 2.0
+
+The second version keeps the same scope of the previos version, 1.0, but include a deployment to Red Hat EAP 7.1 and a web based GUI.
+
+- Web GUI with JSP
+- Deploy to an standalone Red Hat EAP-7.1
+
 ## Project ToDo
 
 - Create the Java EE application
