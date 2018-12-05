@@ -1,5 +1,14 @@
 @CHARSET "UTF-8";
 
-body {
-	font-family: 'Segoe UI', Segoe, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+#banner{
+	width: 500px;
+	height: 150px;
+}
+
+.product-logo{
+	width: 130px;
+}
+
+h1{
+	margin: 20px;
 }
