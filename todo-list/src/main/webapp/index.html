@@ -52,20 +52,34 @@
 				<header class="col-sm-12">
 					<h1>Add a new Task</h1>
 				</header>
-				<article class="col-sm-12">
-					<form class="row">
-						<fieldset class="col-sm-6">
+				<article class="col-sm-6">
+					<form>
+						<fieldset class="form-group">
+							<legend>Task:</legend>
+							<label for="title">Title: </label>
+							<input type="text" class="form-control" placeholder="Task Title" id="title">
+							<br>
+							<label for="desc">Description:</label>
+							<br>
+							<textarea rows="5" placeholder="Task description" id="desc" class="form-control"></textarea>
+						</fieldset>
+						<fieldset class="form-inline">
 							<legend>From:</legend>
-							<span>Date: </span> <input type="date">
+							<label for="starDay">Date: </label> 
+							<input type="date" id="startDay">
 							<br>
-							<span>Time: </span> <input type="time">
+							<label for="firstTime">Time: </label>
+							<input type="time" id="firstTime">
 						</fieldset>
-						<fieldset class="col-sm-6">
+						<fieldset class="form-inline">
 							<legend>To:</legend>
-							<span>Date: </span> <input type="date">
+							<label for="lastDay">Date: </label>
+							<input type="date" id="lastDay">
 							<br>
-							<span>Time: </span> <input type="time">
+							<label for="lastTime">Time: </label>
+							<input type="time" id="lastTime">
 						</fieldset>
+						<input type="submit" class="btn btn-primary" value="Submit">
 					</form>
 				</article>
 			</section>
