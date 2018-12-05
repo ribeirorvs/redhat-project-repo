@@ -24,6 +24,10 @@ The second version keeps the same scope of the previos version, 1.0, but include
 - Web GUI with HTML and Bootstrap
 - Deploy to an standalone Red Hat EAP-7.1
 
+#### Version 2.3
+
+- Create the REST services
+
 ## Project ToDo
 
 - Create the Java EE application
