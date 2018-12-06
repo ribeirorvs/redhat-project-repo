@@ -53,10 +53,7 @@ public class ToDoController {
 		addTask(task);
 	}
 	
-	public TaskController checkTask() throws NumberFormatException, IOException {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Informe the task id: ");
-		int id = Integer.parseInt(reader.readLine());
+	public TaskController checkTask(int id){
 		for (TaskController task : tasks) {
 			if(task.getId() == id) {
 				return task;
@@ -69,8 +66,8 @@ public class ToDoController {
 		this.tasks.remove(task);
 	}
 	
-	public void removeTask() throws NumberFormatException, IOException {
-		TaskController task = this.checkTask();
+	public void removeTask(int id){
+		TaskController task = this.checkTask(id);
 		this.removeTask(task);
 	}
 	

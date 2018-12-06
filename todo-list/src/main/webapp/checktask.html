@@ -47,11 +47,11 @@
 					<h1>Check a Task</h1>
 				</header>
 				<article class="col-sm-6">
-					<form>
+					<form action="/api/todo/check" method="post">
 						<fieldset class="form-group">
 							<legend>Task:</legend>
 							<label for="id">Task id: </label>
-							<input type="number" min="0" id="id">
+							<input type="number" min="0" name="task-id" id="id">
 							<input type="submit" class="btn btn-primary" value="Submit">
 						</fieldset>
 					</form>

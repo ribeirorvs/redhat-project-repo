@@ -10,7 +10,6 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -42,16 +41,10 @@ public class ToDoRest {
 	}
 	
 	@GET
-	@Path("/check/{id}")
-	public String checkTask(@PathParam("id") int id) {
-		try {
-			TaskController t = todoList.checkTask();
-			return t.toString();
-		} catch (NumberFormatException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
+	@Path("/check")
+	public String checkTask(@FormParam("task-id") int id) {
+		TaskController t = todoList.checkTask(id);
+		return t.toString();
 	}
 	
 	
