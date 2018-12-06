@@ -1,9 +1,12 @@
 package com.redhat.rest;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -22,13 +25,20 @@ public class ToDoRest {
 	
 	@POST
 	@Path("/add")
-	public void addTask() {
-		try {
-			todoList.addTask();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void addTask(@FormParam("task-title") String title, 
+						@FormParam("task-desc") String desc,
+						@FormParam("task-startDay") LocalDate startDay, 
+						@FormParam("task-startTime") LocalTime startTime,
+						@FormParam("task-lastDay") LocalDate lastDay,
+						@FormParam("task-lastTime") LocalTime lastTime) {
+		
+		TaskController task = new TaskController(startDay, 
+												lastDay, 
+												startTime, 
+												lastTime, 
+												title, 
+												desc);
+		todoList.addTask(task);
 	}
 	
 	@GET
