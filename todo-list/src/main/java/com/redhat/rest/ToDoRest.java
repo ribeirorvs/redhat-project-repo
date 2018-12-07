@@ -1,6 +1,5 @@
 package com.redhat.rest;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -18,26 +17,33 @@ import com.redhat.controller.ToDoController;
 
 @Path("/todo")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 public class ToDoRest {
-	ToDoController todoList = new ToDoController();
+	
+	@Inject
+	private ToDoController todoList;
 	
 	@POST
 	@Path("/add")
-	public void addTask(@FormParam("task-title") String title, 
+	public String addTask(@FormParam("task-title") String title, 
 						@FormParam("task-desc") String desc,
-						@FormParam("task-startDay") LocalDate startDay, 
-						@FormParam("task-startTime") LocalTime startTime,
-						@FormParam("task-lastDay") LocalDate lastDay,
-						@FormParam("task-lastTime") LocalTime lastTime) {
-		
-		TaskController task = new TaskController(startDay, 
+						@FormParam("task-startDay") String startDay, 
+						@FormParam("task-startTime") String startTime,
+						@FormParam("task-lastDay") String finalDay,
+						@FormParam("task-lastTime") String finalTime) {
+		LocalDate firstDay = LocalDate.parse(startDay);
+		LocalDate lastDay = LocalDate.parse(finalDay);
+		LocalTime firstTime = LocalTime.parse(startTime);
+		LocalTime lastTime = LocalTime.parse(finalTime);
+		TaskController task = new TaskController(firstDay, 
 												lastDay, 
-												startTime, 
+												firstTime, 
 												lastTime, 
 												title, 
 												desc);
 		todoList.addTask(task);
+		System.out.println(todoList.toString());
+		return "ok";
 	}
 	
 	@GET
@@ -53,6 +59,7 @@ public class ToDoRest {
 	@Path("/list")
 	public String listTasks() {
 		List<TaskController> tasks = todoList.getTasks();
+		System.out.println(todoList.toString());
 		return tasks.toString();
 	}
 	
