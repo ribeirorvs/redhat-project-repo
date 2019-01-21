@@ -29,12 +29,13 @@ public class ToDoRest {
 	public String addTask(@FormParam("task-title") String title, 
 						@FormParam("task-desc") String desc,
 						@FormParam("task-startDay") String startDay, 
-						@FormParam("task-lastDay") String finalDay
-						) {
+						@FormParam("task-startTime") String startTime,
+						@FormParam("task-lastDay") String finalDay,
+						@FormParam("task-lastTime") String finalTime) {
 		LocalDate firstDay = LocalDate.parse(startDay);
 		LocalDate lastDay = LocalDate.parse(finalDay);
-		LocalTime firstTime = LocalTime.parse("11:11");
-		LocalTime lastTime = LocalTime.parse("11:11");
+		LocalTime firstTime = LocalTime.parse(startTime);
+		LocalTime lastTime = LocalTime.parse(finalTime);
 		TaskController task = new TaskController(firstDay, 
 												lastDay, 
 												firstTime, 
@@ -42,7 +43,7 @@ public class ToDoRest {
 												title, 
 												desc);
 		todoList.addTask(task);
-		System.out.println("ToDo List now: " + todoList.toString() );
+		System.out.println("ToDO now: " + todoList.toString());
 		return "ok";
 	}
 	
