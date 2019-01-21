@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -28,13 +29,12 @@ public class ToDoRest {
 	public String addTask(@FormParam("task-title") String title, 
 						@FormParam("task-desc") String desc,
 						@FormParam("task-startDay") String startDay, 
-						@FormParam("task-startTime") String startTime,
-						@FormParam("task-lastDay") String finalDay,
-						@FormParam("task-lastTime") String finalTime) {
+						@FormParam("task-lastDay") String finalDay
+						) {
 		LocalDate firstDay = LocalDate.parse(startDay);
 		LocalDate lastDay = LocalDate.parse(finalDay);
-		LocalTime firstTime = LocalTime.parse(startTime);
-		LocalTime lastTime = LocalTime.parse(finalTime);
+		LocalTime firstTime = LocalTime.parse("11:11");
+		LocalTime lastTime = LocalTime.parse("11:11");
 		TaskController task = new TaskController(firstDay, 
 												lastDay, 
 												firstTime, 
@@ -42,7 +42,7 @@ public class ToDoRest {
 												title, 
 												desc);
 		todoList.addTask(task);
-		System.out.println(todoList.toString());
+		System.out.println("ToDo List now: " + todoList.toString() );
 		return "ok";
 	}
 	
