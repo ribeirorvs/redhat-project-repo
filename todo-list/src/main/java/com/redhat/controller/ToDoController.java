@@ -41,13 +41,13 @@ public class ToDoController {
 		System.out.print("Title of the task: ");
 		task.setTitle(reader.readLine());
 		System.out.print("Start day (yyyy-MM-dd): ");
-		task.setStartDay(LocalDate.parse(reader.readLine()));
+		task.setStartDay(LocalDate.parse(reader.readLine()).toString());
 		System.out.print("Start time (HH:mm:ss): ");
-		task.setStartTime(LocalTime.parse(reader.readLine()));
+		task.setStartTime(LocalTime.parse(reader.readLine()).toString());
 		System.out.print("End day (yyyy-MM-dd): ");
-		task.setFinalDay(LocalDate.parse(reader.readLine()));
+		task.setFinalDay(LocalDate.parse(reader.readLine()).toString());
 		System.out.print("End time (HH:mm:ss): ");
-		task.setFinalTime(LocalTime.parse(reader.readLine()));
+		task.setFinalTime(LocalTime.parse(reader.readLine()).toString());
 		System.out.print("Description : ");
 		task.setDescription(reader.readLine());
 		addTask(task);

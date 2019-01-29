@@ -1,7 +1,5 @@
 package com.redhat.controller;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 import com.redhat.model.Task;
 
@@ -10,8 +8,8 @@ public class TaskController {
 	private static int total = 0;
 	
 	private int id;
-	private LocalDate startDay, finalDay;
-	private LocalTime startTime, finalTime;
+	private String startDay, finalDay;
+	private String startTime, finalTime;
 	private String title;
 	private String description;
 	
@@ -27,8 +25,8 @@ public class TaskController {
 	}
 	
 
-	public TaskController(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
-			LocalTime finalTime, String title, String description) {
+	public TaskController(String startDay, String finalDay, String startTime, 
+			String finalTime, String title, String description) {
 		this();
 		this.startDay = startDay;
 		this.finalDay = finalDay;
@@ -38,35 +36,35 @@ public class TaskController {
 		this.description = description;
 	}
 
-	public LocalDate getStartDay() {
+	public String getStartDay() {
 		return startDay;
 	}
 
-	public void setStartDay(LocalDate startDay) {
+	public void setStartDay(String startDay) {
 		this.startDay = startDay;
 	}
 
-	public LocalDate getFinalDay() {
+	public String getFinalDay() {
 		return finalDay;
 	}
 
-	public void setFinalDay(LocalDate finalDay) {
+	public void setFinalDay(String finalDay) {
 		this.finalDay = finalDay;
 	}
 
-	public LocalTime getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(LocalTime startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 
-	public LocalTime getFinalTime() {
+	public String getFinalTime() {
 		return finalTime;
 	}
 
-	public void setFinalTime(LocalTime finalTime) {
+	public void setFinalTime(String finalTime) {
 		this.finalTime = finalTime;
 	}
 

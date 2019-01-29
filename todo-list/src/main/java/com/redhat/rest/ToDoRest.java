@@ -1,10 +1,11 @@
 package com.redhat.rest;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -12,6 +13,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
@@ -21,21 +24,20 @@ import com.redhat.controller.ToDoController;
 @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 public class ToDoRest {
 	
-	@Inject
-	private ToDoController todoList;
+	private ToDoController todoList = new ToDoController();
 	
 	@POST
 	@Path("/add")
-	public String addTask(@FormParam("task-title") String title, 
+	public Response addTask(@FormParam("task-title") String title, 
 						@FormParam("task-desc") String desc,
 						@FormParam("task-startDay") String startDay, 
 						@FormParam("task-startTime") String startTime,
 						@FormParam("task-lastDay") String finalDay,
 						@FormParam("task-lastTime") String finalTime) {
-		LocalDate firstDay = LocalDate.parse(startDay);
-		LocalDate lastDay = LocalDate.parse(finalDay);
-		LocalTime firstTime = LocalTime.parse(startTime);
-		LocalTime lastTime = LocalTime.parse(finalTime);
+		String firstDay = LocalDate.parse(startDay).toString();
+		String lastDay = LocalDate.parse(finalDay).toString();
+		String firstTime = LocalTime.parse(startTime).toString();
+		String lastTime = LocalTime.parse(finalTime).toString();
 		TaskController task = new TaskController(firstDay, 
 												lastDay, 
 												firstTime, 
@@ -43,8 +45,16 @@ public class ToDoRest {
 												title, 
 												desc);
 		todoList.addTask(task);
-		System.out.println("ToDO now: " + todoList.toString());
-		return "ok";
+		ResponseBuilder builder = null;
+		
+		try {
+			builder = Response.seeOther(new URI("../"));
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return builder.build();
 	}
 	
 	@GET
@@ -61,6 +71,7 @@ public class ToDoRest {
 	public String listTasks() {
 		List<TaskController> tasks = todoList.getTasks();
 		System.out.println(todoList.toString());
+		System.out.println("Ok K.O.");
 		return tasks.toString();
 	}
 	

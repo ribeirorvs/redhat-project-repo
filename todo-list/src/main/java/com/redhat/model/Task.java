@@ -11,8 +11,8 @@ public class Task implements Serializable {
 	private static int total = 0;
 	
 	private int id;
-	private LocalDate startDay, finalDay;
-	private LocalTime startTime, finalTime;
+	private String startDay, finalDay;
+	private String startTime, finalTime;
 	private String title;
 	private String description;
 	
@@ -22,8 +22,8 @@ public class Task implements Serializable {
 		total++;
 	}
 	
-	public Task(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
-			LocalTime finalTime, String title, String description) {
+	public Task(String startDay, String finalDay, String startTime, 
+			String finalTime, String title, String description) {
 		this();
 		this.startDay = startDay;
 		this.finalDay = finalDay;
@@ -33,35 +33,35 @@ public class Task implements Serializable {
 		this.description = description;
 	}
 
-	public LocalDate getStartDay() {
+	public String getStartDay() {
 		return startDay;
 	}
 
-	public void setStartDay(LocalDate startDay) {
+	public void setStartDay(String startDay) {
 		this.startDay = startDay;
 	}
 
-	public LocalDate getFinalDay() {
+	public String getFinalDay() {
 		return finalDay;
 	}
 
-	public void setFinalDay(LocalDate finalDay) {
+	public void setFinalDay(String finalDay) {
 		this.finalDay = finalDay;
 	}
 
-	public LocalTime getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(LocalTime startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 
-	public LocalTime getFinalTime() {
+	public String getFinalTime() {
 		return finalTime;
 	}
 
-	public void setFinalTime(LocalTime finalTime) {
+	public void setFinalTime(String finalTime) {
 		this.finalTime = finalTime;
 	}
 

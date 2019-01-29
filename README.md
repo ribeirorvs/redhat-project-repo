@@ -27,6 +27,7 @@ The second version keeps the same scope of the previos version, 1.0, but include
 #### Version 2.3
 
 - Create the REST services
+- Chante the GUI to JSF
 
 ## Project ToDo
 
