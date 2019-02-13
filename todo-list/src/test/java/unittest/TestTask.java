@@ -48,6 +48,20 @@ class TestTask {
 		
 		Task t = new Task(startDay, endDay, startTime, endTime,
 							"Task title", "Task description");
+		assertNotNull(t, "Task can't be instanteated!");
+	}
+	
+	@Test
+	void testSetTitle() {
+		Task t = new Task();
+		t.setTitle("Task title");
+		assertEquals(t.getTitle(), "Task title", "Incorrect title");
 	}
 
+	@Test
+	void testSetDescription() {
+		Task t = new Task();
+		t.setDescription("Task description");
+		assertEquals(t.getDescription(), "Test description", "Incorrect decription");
+	}
 }
