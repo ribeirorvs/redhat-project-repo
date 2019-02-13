@@ -34,10 +34,10 @@ public class ToDoRest {
 						@FormParam("task-startTime") String startTime,
 						@FormParam("task-lastDay") String finalDay,
 						@FormParam("task-lastTime") String finalTime) {
-		String firstDay = LocalDate.parse(startDay).toString();
-		String lastDay = LocalDate.parse(finalDay).toString();
-		String firstTime = LocalTime.parse(startTime).toString();
-		String lastTime = LocalTime.parse(finalTime).toString();
+		LocalDate firstDay = LocalDate.parse(startDay);
+		LocalDate lastDay = LocalDate.parse(finalDay);
+		LocalTime firstTime = LocalTime.parse(startTime);
+		LocalTime lastTime = LocalTime.parse(finalTime);
 		TaskController task = new TaskController(firstDay, 
 												lastDay, 
 												firstTime, 

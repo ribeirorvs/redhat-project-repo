@@ -44,7 +44,9 @@ public class Main {
 				break;
 			case 2:
 				try {
-					TaskController t = todoList.checkTask();
+					System.out.println("Informe o id da task: ");
+					int id = Integer.parseInt(reader.readLine());
+					TaskController t = todoList.checkTask(id);
 					System.out.println(t.toString());
 				} catch (NumberFormatException | IOException | NullPointerException e) {
 					System.out.println("Error to found the task " + 
@@ -53,7 +55,9 @@ public class Main {
 				break;
 			case 3:
 				try {
-					todoList.removeTask();
+					System.out.println("Informe o id da task: ");
+					int id = Integer.parseInt(reader.readLine());
+					todoList.removeTask(id);
 				} catch (NumberFormatException | IOException e) {
 					System.out.println("Error to remove the task " + 
 							e.getMessage());
