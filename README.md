@@ -40,7 +40,8 @@ TODO
 - Deploy the application in a standalone JBoss EAP
 - Deploy the application in a domain clustered JBoss EAP
 - Include persistence using JPA/Hibernate and MySQL
-- Include cache persistence using JBoss Data Grid
+- Include cache persistence using JBoss Data Grid with API
+- Include cache persistence using JBoss Data Grid remote
 - Include RHPAM process manager
 - Migrate the application to OpenShift
 - Migrate the application from Monolith to Microservice
