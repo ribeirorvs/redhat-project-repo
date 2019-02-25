@@ -87,23 +87,4 @@ class TestTask {
 		assertEquals(t.getId(), 1000, "");
 	}
 
-	@Test
-	void testToString() {
-		LocalDate startDay, endDay;
-		LocalTime startTime, endTime;
-		
-		startDay = LocalDate.parse("2018-12-30");
-		endDay = LocalDate.parse("2019-02-19");
-		
-		startTime = LocalTime.parse("00:00");
-		endTime = LocalTime.parse("20:17");
-		
-		
-		Task t = new Task(startDay, endDay, startTime, endTime,
-							"Task title", "Task description");
-		String toString = "Task [Id=" + t.getId() + ", titile=Task title, From=2018-12-30 00:00, to=2019-02-19 20:17, description=Task description]";
-		
-		assertEquals(t.toString(), toString, ".toString result incorrect");
-	}
-
 }

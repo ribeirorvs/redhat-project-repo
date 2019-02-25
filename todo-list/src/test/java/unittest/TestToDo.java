@@ -75,10 +75,16 @@ class TestToDo {
 
 	@Test
 	void testClearToDo() {
-	}
-
-	@Test
-	void testToString() {
+		List<Task> tasks = new ArrayList<Task>();
+		for(int i = 0; i < 3; i++) {
+			Task t = new Task();
+			tasks.add(t);
+		}
+		ToDo td = new ToDo();
+		td.setTasks(tasks);
+		assertEquals(td.getTasks().size(), 3, "Error to set tasks");
+		td.clearToDo();
+		assertEquals(0, td.getTasks().size(), "Error to clear tasks");
 	}
 
 }
