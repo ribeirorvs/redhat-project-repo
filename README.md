@@ -31,8 +31,8 @@ TODO
 The version 2.3 keeps the previos scope and include jUnit tests and create a newuser interface, using Servelet and JSP. Minor changes include changes in variable types.
 
 TODO
-- Create Unit Tests
-- Chante the GUI to Servlet and JSP
+- Create Unit Tests (Done)
+- Chante the GUI with Servlet and JSP
 
 ## Project TODO
 
