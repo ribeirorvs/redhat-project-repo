@@ -42,3 +42,5 @@ TODO
 - Include persistence using JPA/Hibernate and MySQL
 - Include cache persistence using JBoss Data Grid
 - Include RHPAM process manager
+- Migrate the application to OpenShift
+- Migrate the application from Monolith to Microservice
