@@ -10,11 +10,11 @@ public class TaskController {
 	
 	private static int total = 0;
 	
-	private int id;
-	private LocalDate startDay, finalDay;
-	private LocalTime startTime, finalTime;
-	private String title;
-	private String description;
+	private int id; //required
+	private LocalDate startDay, finalDay; //required
+	private LocalTime startTime, finalTime; //required
+	private String title;//required
+	private String description;//optional
 	
 	
 	public TaskController() {

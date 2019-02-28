@@ -32,7 +32,7 @@ The version 2.3 keeps the previos scope and include jUnit tests and create a new
 
 TODO
 - Create Unit Tests (Done)
-- Chante the GUI with Servlet and JSP
+- Chante the GUI from HTML to Servlet and JSP with scriplet
 
 ## Project TODO
 
