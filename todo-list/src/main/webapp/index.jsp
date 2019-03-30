@@ -49,7 +49,7 @@
 					<h1>Add a new Task</h1>
 				</header>
 				<article class="col-sm-6">
-					<form action="api/todo/add" method="post">
+					<form action="AddTask.do" method="post">
 						<fieldset class="form-group">
 							<legend>Task:</legend>
 							<label for="title">Title: </label>
