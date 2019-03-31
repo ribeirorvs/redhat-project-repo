@@ -56,7 +56,7 @@
 	</properties>
 
 	<build>
-		<finalName>simple-webapp</finalName>
+		<finalName>todo-list</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
