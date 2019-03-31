@@ -1,0 +1,8 @@
+com/redhat/controller/ToDoController.class
+com/redhat/model/Task.class
+com/redhat/rest/Rest.class
+com/redhat/model/ToDo.class
+com/redhat/view/Main.class
+com/redhat/servlet/AddTaskServlet.class
+com/redhat/rest/ToDoRest.class
+com/redhat/controller/TaskController.class
