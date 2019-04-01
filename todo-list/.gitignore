@@ -1,1 +1,5 @@
-#Ignore all sub folder on target folder
+#Ignore all sub folder on target folde
+/target/
+
+#Don't ignode war file in target folder
+!/tartet/*.war
