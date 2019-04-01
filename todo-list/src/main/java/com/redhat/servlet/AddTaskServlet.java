@@ -25,10 +25,9 @@ public class AddTaskServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	private static ToDoController td = new ToDoController();
 	public void doPost(HttpServletRequest request, 
 						HttpServletResponse response) throws ServletException, IOException {
-		ToDoController td = new ToDoController();
 		switch(request.getParameter("operation")) {
 		case "addTask":
 			addTask(request, response, td);
