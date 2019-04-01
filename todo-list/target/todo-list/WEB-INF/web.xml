@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app 
+			version="3.0" 
+			xmlns="http://java.sun.com/xml/ns/javaee"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://java.sun.com/xml/ns/javaee	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<display-name>Simple web application</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<!-- Create a name to servlet class. This name link the servlet with the 
+			mapping url -->
+		<servlet-name>addTask</servlet-name>
+		<!-- Define the servlet class -->
+		<servlet-class>com.redhat.servlet.AddTaskServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<!-- Servlet name, the same as the above declared -->
+		<servlet-name>addTask</servlet-name>
+		<!-- The url to give access to the servlet -->
+		<url-pattern>/AddTask.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -34,7 +34,7 @@ public class AddTaskServlet extends HttpServlet{
 		
 		td.addTask(t);
 		
-		request.setAttribute("styles", "foi");
+		request.setAttribute("styles", request.getParameter("operation"));
 		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
 		view.forward(request, response);
 		
