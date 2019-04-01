@@ -1,0 +1,5 @@
+#Ignore all folders
+*/
+
+#Don't ignore the war file
+!*.war
