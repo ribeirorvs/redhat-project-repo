@@ -21,9 +21,28 @@ import com.redhat.controller.ToDoController;
  *
  */
 public class AddTaskServlet extends HttpServlet{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public void doPost(HttpServletRequest request, 
 						HttpServletResponse response) throws ServletException, IOException {
 		ToDoController td = new ToDoController();
+		switch(request.getParameter("operation")) {
+		case "addTask":
+			addTask(request, response, td);
+			break;
+		}
+		
+		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+		view.forward(request, response);
+		
+	}
+	
+	private void addTask(HttpServletRequest request, 
+						HttpServletResponse response,
+						ToDoController td) {
 		TaskController t = new TaskController();
 		t.setDescription(request.getParameter("task-desc"));
 		t.setTitle(request.getParameter("task-title"));
@@ -34,9 +53,7 @@ public class AddTaskServlet extends HttpServlet{
 		
 		td.addTask(t);
 		
-		request.setAttribute("styles", request.getParameter("operation"));
-		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
-		view.forward(request, response);
-		
+		request.setAttribute("styles", td.toString());
 	}
+	
 }
