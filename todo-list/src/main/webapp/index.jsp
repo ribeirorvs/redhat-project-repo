@@ -39,7 +39,7 @@
 							<a class="nav-link" href="checktask.html">Check Task</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="listtasks.html">List Tasks</a>
+							<a class="nav-link" href="listtask.jsp">List Tasks</a>
 						</li>
 					</ul>
 				</section>

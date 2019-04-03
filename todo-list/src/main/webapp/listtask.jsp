@@ -48,7 +48,10 @@
 				</header>
 				<article class="col-sm-6">
 					<div class="btn-group">
-						<button type="button" class="btn btn-primary" onclick="ListTasks.do">All</button>
+						<form action="ListTasks.do" method="post">
+							<input type="hidden" name="operation" value="listTasks">
+							<input type="submit" class="btn btn-primary" value="All">
+						</form>
 					</div>
 				</article>
 			</section>
