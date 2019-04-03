@@ -20,12 +20,13 @@ import com.redhat.controller.ToDoController;
  * @author roribeir
  *
  */
-public class AddTaskServlet extends HttpServlet{
+public class ServletController extends HttpServlet{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static ToDoController td = new ToDoController();
+	private ToDoController td = new ToDoController();
+	
 	public void doPost(HttpServletRequest request, 
 						HttpServletResponse response) throws ServletException, IOException {
 		switch(request.getParameter("operation")) {
