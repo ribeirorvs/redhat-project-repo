@@ -36,6 +36,8 @@ public class ServletController extends HttpServlet{
 		case "listTasks":
 			listTasks(request, response, td);
 			break;
+		case "checkTask":
+			break;
 		}
 		
 		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
@@ -63,6 +65,12 @@ public class ServletController extends HttpServlet{
 			HttpServletResponse response,
 			ToDoController td) {
 		request.setAttribute("styles", td.toString());
+	}
+	
+	private void checkTask(HttpServletRequest request,
+							HttpServletResponse response,
+							ToDoController td) {
+		
 	}
 	
 }

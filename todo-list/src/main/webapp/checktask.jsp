@@ -47,7 +47,8 @@
 					<h1>Check a Task</h1>
 				</header>
 				<article class="col-sm-6">
-					<form action="api/todo/check" method="post">
+					<form action="CheckTask.do" method="post">
+						<input type="hidden" name="operation" value="checkTask">
 						<fieldset class="form-group">
 							<legend>Task:</legend>
 							<label for="id">Task id: </label>
