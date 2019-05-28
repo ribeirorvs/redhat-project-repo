@@ -31,4 +31,9 @@
 		<servlet-name>servletTask</servlet-name>
 		<url-pattern>/ListTasks.do</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<!-- Servlet name, the same as the above declared -->
+		<servlet-name>servletTask</servlet-name>
+		<url-pattern>/CheckTask.do</url-pattern>
+	</servlet-mapping>
 </web-app>

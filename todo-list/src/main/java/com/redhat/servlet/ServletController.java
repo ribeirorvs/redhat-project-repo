@@ -37,6 +37,7 @@ public class ServletController extends HttpServlet{
 			listTasks(request, response, td);
 			break;
 		case "checkTask":
+			checkTask(request, response, td);
 			break;
 		}
 		
@@ -70,7 +71,8 @@ public class ServletController extends HttpServlet{
 	private void checkTask(HttpServletRequest request,
 							HttpServletResponse response,
 							ToDoController td) {
-		
+		request.setAttribute("style", td.checkTask(
+						Integer.parseInt(request.getParameter("id"))));
 	}
 	
 }
