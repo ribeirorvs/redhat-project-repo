@@ -24,3 +24,7 @@ hs_err_pid*
 
 # Old Versions #
 todo-list-1.0/
+
+# Target folder
+/target/
+target/
