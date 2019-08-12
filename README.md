@@ -13,7 +13,7 @@ How the application can be changed with the project growing, the description of 
 
 The initial project consisting of a ToDo list using MVC pattern and without any notification, the user can add, remove or check a task, list all tasks and clean all ToDo list.
 
-TODO
+#### TODO
 - In this version the only technology used is Java EE, because that this version does't have a persistence method (it will be implemented in a new version future).
 - In this version the application don't have a GUI, is used only by terminal.
 
@@ -21,18 +21,30 @@ TODO
 
 The second version keeps the same scope of the previos version, 1.0, but include a deployment to Red Hat EAP 7.1 and a web based GUI. To do this deploy a new git repo was created, this new repo has all needed to deploy this application in the Red Hat EAP 7.1.
 
-TODO
+#### TODO
 - Create a new repo [(redhat-project)](https://github.com/ribeirorvs/redhat-project) with "how to" deploy this application in an Red Hat EAP 7.1 (Done)
 - Web GUI with HTML and Bootstrap (Done)
 - Deploy to an standalone Red Hat EAP-7.1 (Done)
 
-#### Version 2.3
+### Version 2.3
 
 The version 2.3 keeps the previos scope and include jUnit tests and create a newuser interface, using Servelet and JSP. Minor changes include changes in variable types.
 
-TODO
+#### TODO
 - Create Unit Tests (Done)
 - Chante the GUI from HTML to Servlet and JSP with scriplet (Done)
+
+### Version 2.5
+
+Version 2.5 improves the code included in version 2.3, the Servlet and JSP are refined, using the best practices of these technologies.
+The code reading is improved in all the project, including more comments and follow the Java code convention where it is not followed yet. More tests are included.
+
+#### TODO
+- Create all Unit Tests
+- Create Integration Tests
+- Remove scripted from JSP
+- Refine Servelet
+- Improve the code reading
 
 ## Project TODO
 
