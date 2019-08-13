@@ -1,10 +1,18 @@
-package com.redhat.controller;
+/*
+ * 
+ */
 
+package com.redhat.controller;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 import com.redhat.model.Task;
+
+/*
+ * @version 	2.5 13 Aug 2019
+ * @author		Rodrigo Vitor Ribeiro
+ */
 
 public class TaskController {
 	
@@ -16,7 +24,6 @@ public class TaskController {
 	private String title;//required
 	private String description;//optional
 	
-	
 	public TaskController() {
 		this.id = total;
 		total++;
@@ -27,9 +34,9 @@ public class TaskController {
 				task.getFinalTime(), task.getTitle(), task.getDescription());
 	}
 	
-
-	public TaskController(LocalDate startDay, LocalDate finalDay, LocalTime startTime, 
-			LocalTime finalTime, String title, String description) {
+	public TaskController(LocalDate startDay, LocalDate finalDay, 
+			LocalTime startTime, LocalTime finalTime, String title, 
+			String description) {
 		this();
 		this.startDay = startDay;
 		this.finalDay = finalDay;
