@@ -1,8 +1,17 @@
+/**
+ * 
+ */
+
 package com.redhat.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+/**
+ * @version		1.0
+ * @author		Rodrigo Vitor Ribeiro
+ */
 
 public class Task implements Serializable {
 	

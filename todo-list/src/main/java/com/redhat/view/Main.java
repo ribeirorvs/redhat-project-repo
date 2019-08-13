@@ -1,3 +1,7 @@
+/*
+ * 
+ */
+
 package com.redhat.view;
 
 import java.io.BufferedReader;
@@ -9,9 +13,10 @@ import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
 
 /**
+ * Main class to run the application on console mode
  * 
- * @author roribeir
- *
+ * @version 	1.0
+ * @author 		Rodrigo Vitor Ribeiro
  */
 public class Main {
 

@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 package com.redhat.rest;
 
 import java.net.URI;
@@ -5,7 +9,6 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -15,10 +18,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
-
 import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
 
+/**
+ * @version 	2.0
+ * @author 		Rodrigo Vitor Ribeiro
+ */
 @Path("/todo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_FORM_URLENCODED)

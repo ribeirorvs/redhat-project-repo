@@ -1,8 +1,17 @@
+/**
+ * 
+ */
+
 package com.redhat.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * @version		1.0
+ * @author 		Rodrigo Vitor Ribeiro
+ */
 
 public class ToDo implements Serializable {
 

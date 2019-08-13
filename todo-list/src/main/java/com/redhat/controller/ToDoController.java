@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 package com.redhat.controller;
 
 import java.io.BufferedReader;
@@ -10,6 +14,11 @@ import java.util.List;
 
 import com.redhat.model.Task;
 import com.redhat.model.ToDo;
+
+/**
+ * @version 	2.0
+ * @author 		Rodrigo Vitor Ribeiro
+ */
 
 public class ToDoController {
 	
@@ -35,6 +44,10 @@ public class ToDoController {
 		this.tasks.add(task);
 	}
 	
+	/**
+	 * The method addTask are created to support non GUI application.
+	 * Method related with console application version  	
+	 */
 	public void addTask() throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		TaskController task = new TaskController();

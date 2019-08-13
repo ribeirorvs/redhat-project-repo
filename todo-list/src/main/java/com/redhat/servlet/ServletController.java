@@ -1,4 +1,4 @@
-/**
+/*
  * 
  */
 package com.redhat.servlet;
@@ -17,13 +17,10 @@ import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
 
 /**
- * @author roribeir
- *
+ * @version		2.5 13 Aug 2019
+ * @author 		Rodrigo Vitor Ribeiro
  */
 public class ServletController extends HttpServlet{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private ToDoController td = new ToDoController();
 	

@@ -1,4 +1,4 @@
-/*
+/**
  * 
  */
 
@@ -9,7 +9,7 @@ import java.time.LocalTime;
 
 import com.redhat.model.Task;
 
-/*
+/**
  * @version 	2.5 13 Aug 2019
  * @author		Rodrigo Vitor Ribeiro
  */
@@ -18,11 +18,11 @@ public class TaskController {
 	
 	private static int total = 0;
 	
-	private int id; //required
-	private LocalDate startDay, finalDay; //required
-	private LocalTime startTime, finalTime; //required
-	private String title;//required
-	private String description;//optional
+	private int id;
+	private LocalDate startDay, finalDay;
+	private LocalTime startTime, finalTime; 
+	private String title;
+	private String description;
 	
 	public TaskController() {
 		this.id = total;
