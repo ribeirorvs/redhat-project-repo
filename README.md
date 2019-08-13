@@ -37,7 +37,7 @@ The version 2.3 keeps the previos scope and include jUnit tests and create a new
 ### Version 2.5
 
 Version 2.5 improves the code included in version 2.3, the Servlet and JSP are refined, using the best practices of these technologies.
-The code reading is improved in all the project, including more comments and follow the Java code convention where it is not followed yet. More tests are included.
+The code reading is improved in all the project, including more comments and follow the convetion of the plugin [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html). More tests are included.
 
 #### TODO
 - Create all Unit Tests
