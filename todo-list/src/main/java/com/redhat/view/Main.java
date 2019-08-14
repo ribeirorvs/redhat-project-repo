@@ -19,6 +19,9 @@ import com.redhat.controller.ToDoController;
  */
 public final class Main {
 
+    /**
+     * Hidden the constructor of utility class.
+     */
     private Main() {
         throw new UnsupportedOperationException();
     }
