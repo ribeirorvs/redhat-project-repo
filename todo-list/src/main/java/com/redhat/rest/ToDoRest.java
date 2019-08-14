@@ -36,27 +36,34 @@ public class ToDoRest {
     private ToDoController todoList = new ToDoController();
 
     /**
-     * @param title
-     * @param desc
-     * @param startDay
-     * @param startTime
-     * @param finalDay
-     * @param finalTime
-     * @return
+     * This method is responsible for insert a new task in the
+     * TO DO task list.
+     * <p>
+     * This method are functional, but don't return nothing.
+     *
+     * @param title The title of the new task
+     * @param desc The description of the new task, it can be null
+     * @param startDay The start day of the task, need to be => to actual date
+     * @param startTime The start time of the task need to be > to actual time
+     * @param finalDay The final day of the task need to be => to startDay
+     * @param finalTime If the finalDay is the same as startDay,
+     * this need to be > then startTime
+     * @return return the process to index.jsp
+     * @see Response
      */
     @POST
     @Path("/add")
-    public Response addTask(@FormParam("task-title") String title,
-            @FormParam("task-desc") String desc,
-            @FormParam("task-startDay") String startDay,
-            @FormParam("task-startTime") String startTime,
-            @FormParam("task-lastDay") String finalDay,
-            @FormParam("task-lastTime") String finalTime) {
+    public Response addTask(@FormParam("task-title") final String title,
+            @FormParam("task-desc") final String desc,
+            @FormParam("task-startDay") final String startDay,
+            @FormParam("task-startTime") final String startTime,
+            @FormParam("task-lastDay") final String finalDay,
+            @FormParam("task-lastTime") final String finalTime) {
         LocalDate firstDay = LocalDate.parse(startDay);
         LocalDate lastDay = LocalDate.parse(finalDay);
         LocalTime firstTime = LocalTime.parse(startTime);
         LocalTime lastTime = LocalTime.parse(finalTime);
-        TaskController task = new TaskController(firstDay, 
+        TaskController task = new TaskController(firstDay,
                 lastDay,
                 firstTime,
                 lastTime,
@@ -76,18 +83,28 @@ public class ToDoRest {
     }
 
     /**
-     * @param id
-     * @return
+     * This method return all informations about one task
+     * from TO DO list.
+     * <p>
+     * This method are functional, but return only a string
+     *
+     * @param id The id of the task will be returned
+     * @return return the task in a string
      */
     @GET
     @Path("/check")
-    public String checkTask(@FormParam("task-id") int id) {
+    public String checkTask(@FormParam("task-id") final int id) {
         TaskController t = todoList.checkTask(id);
         return t.toString();
     }
 
     /**
-     * @return
+     * This method return all informations about the
+     * whole list of tasks in TO DO list.
+     * <p>
+     * This method are functional, but return only a string
+     *
+     * @return return a string with the informations of all tasks
      */
     @GET
     @Path("/list")
