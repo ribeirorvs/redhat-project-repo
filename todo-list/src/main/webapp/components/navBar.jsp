@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	<a class="navbar-brand" href="<%= request.getParameter("addTaskLink")%>">ToDo</a>
+	<a class="navbar-brand" href="<%= request.getParameter("toDo")%>">ToDo</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>

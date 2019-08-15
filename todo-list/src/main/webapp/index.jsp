@@ -4,7 +4,7 @@
 	<jsp:param value="#" name="toDo"/>
 	<jsp:param value="#" name="addTaskLink"/>
 	<jsp:param value="checktask.jsp" name="checkTaskLink"/>
-	<jsp:param value="listtask.jsp" name="listTaskLink"/>
+	<jsp:param value="listtasks.jsp" name="listTaskLink"/>
 </jsp:include>
 			<section class="row">
 				<header class="col-sm-12">
