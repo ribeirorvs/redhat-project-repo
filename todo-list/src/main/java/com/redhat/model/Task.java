@@ -40,11 +40,11 @@ public class Task implements Serializable {
      * @param descriptionVal The description of the task, it can be null
      */
     public Task(final LocalDate startDayVal,
-                final LocalDate finalDayVal,
-                final LocalTime startTimeVal,
-                final LocalTime finalTimeVal,
-                final String titleVal,
-                final String descriptionVal) {
+            final LocalDate finalDayVal,
+            final LocalTime startTimeVal,
+            final LocalTime finalTimeVal,
+            final String titleVal,
+            final String descriptionVal) {
         this();
         this.startDay = startDayVal;
         this.finalDay = finalDayVal;
