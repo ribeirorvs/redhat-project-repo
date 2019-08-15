@@ -1,16 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Sample JSP</title>
-</head>
-<body>
-	<%
-		String styles = (String) request.getAttribute("styles");
-		out.print("<br>Try: " + styles);
-	%>
-</body>
-</html>
+<%@ include file="components/head.jsp" %>
+<%@ include file="components/header.jsp" %>
+<%@ include file="components/navBar.jsp" %>
+			<section class="row">
+				<header class="col-sm-12">
+					<h1>Result Page</h1>
+				</header>
+				<article class="col-sm-6">
+					<div class="btn-group">
+						<%
+							String styles = (String) request.getAttribute("styles");
+							out.print("<br>Try: " + styles);
+						%>
+					</div>
+				</article>
+			</section>
+<%@ include file="components/footer.jsp" %>
