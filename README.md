@@ -44,7 +44,7 @@ The code reading is improved in all the project, including more comments and fol
 - Create Integration Tests
 - Remove scripted from JSP
 - Refine Servelet
-- Improve the code reading
+- Improve the code reading (Done)
 - Create the functions Remove and Clear tasks
 
 ## Project TODO
