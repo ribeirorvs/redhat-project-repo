@@ -3,37 +3,25 @@ package com.redhat.servlet;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
 
 /**
- * Servlet implementation class ServletController
- *
  * @version 2.5 13 Aug 2019
  * @author Rodrigo Vitor Ribeiro
  */
-public class ServletController extends HttpServlet {
+public class ServletController2 extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
     private ToDoController td = new ToDoController();
 
     /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-     */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        response.getWriter().append("Served at: ").append(request.getContextPath());
-    }
-
-    /**
-     * The doPost method that controller what the servlet will do.
-     *
+     * The doPost method that controlle what the servlet will do.
      * @param request A request with the parameters what
      * will used to add the task.
      * @param response A response that can be used to return the method result,
@@ -42,9 +30,10 @@ public class ServletController extends HttpServlet {
      * @throws IOException Return error from IO
      * @see HttpServletRequest
      * @see HttpServletResponse
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(final HttpServletRequest request,
+                        final HttpServletResponse response)
+                                throws ServletException, IOException {
         switch (request.getParameter("operation")) {
         case "addTask":
             addTask(request, response, td);
@@ -61,7 +50,7 @@ public class ServletController extends HttpServlet {
 
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request, response);
-        //doGet(request, response);
+
     }
 
     /**
@@ -131,4 +120,5 @@ public class ServletController extends HttpServlet {
         request.setAttribute("style", tmpTd.checkTask(
                 Integer.parseInt(request.getParameter("id"))));
     }
+
 }

@@ -19,6 +19,20 @@
 		<!-- Define the servlet class -->
 		<servlet-class>com.redhat.servlet.ServletController</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletGets</display-name>
+		<servlet-name>ServletGets</servlet-name>
+		<servlet-class>com.redhat.servlet.ServletGets</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletController</display-name>
+		<servlet-name>ServletController</servlet-name>
+		<servlet-class>com.redhat.servlet.ServletController</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<!-- Servlet name, the same as the above declared -->
@@ -35,5 +49,13 @@
 		<!-- Servlet name, the same as the above declared -->
 		<servlet-name>servletTask</servlet-name>
 		<url-pattern>/CheckTask.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletGets</servlet-name>
+		<url-pattern>/ServletGets</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletController</servlet-name>
+		<url-pattern>/ServletController</url-pattern>
 	</servlet-mapping>
 </web-app>
