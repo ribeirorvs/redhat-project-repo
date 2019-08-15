@@ -1,6 +1,11 @@
 <%@ include file="components/head.jsp" %>
 <%@ include file="components/header.jsp" %>
-<%@ include file="components/navBar.jsp" %>
+<jsp:include page="components/navBar.jsp">
+	<jsp:param value="#" name="toDo"/>
+	<jsp:param value="#" name="addTaskLink"/>
+	<jsp:param value="checktask.jsp" name="checkTaskLink"/>
+	<jsp:param value="listtask.jsp" name="listTaskLink"/>
+</jsp:include>
 			<section class="row">
 				<header class="col-sm-12">
 					<h1>Add a new Task</h1>

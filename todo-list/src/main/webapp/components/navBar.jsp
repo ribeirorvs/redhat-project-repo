@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	<a class="navbar-brand" href="#">ToDo</a>
+	<a class="navbar-brand" href="<%= request.getParameter("addTaskLink")%>">ToDo</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<section class="collapse navbar-collapse" id="collapsibleNavbar">
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="#">Add Task</a></li>
-			<li class="nav-item"><a class="nav-link" href="checktask.jsp">Check
+			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("addTaskLink")%>">Add Task</a></li>
+			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("checkTaskLink")%>">Check
 					Task</a></li>
-			<li class="nav-item"><a class="nav-link" href="listtasks.jsp">List
+			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("listTaskLink")%>">List
 					Tasks</a></li>
 		</ul>
 	</section>
