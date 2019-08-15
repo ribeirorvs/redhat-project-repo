@@ -1,30 +1,5 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-sacle=1">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<title>Red Hat Project - To Do List in EAP 7.1</title>
-	</head>
-	<body>
-		<section class="container-fluid">
-			<header class="row text-center">
-				<section class="col-sm-12">
-					<img src="img/redhat_banner.png" id="banner">
-				</section>
-				<section class="col-sm-6">
-					<img src="img/javaee_logo.png" class="product-logo">
-				</section>
-				<section class="col-sm-6">
-					<img src="img/eap_logo.png" class="product-logo">
-				</section>
-				<!-- <section class="col-sm-3">
-					<img src="img/datagrid_logo.png" class="product-logo">
-				</section>  -->
-			</header>
+<%@ include file="components/head.jsp" %>
+<%@ include file="components/header.jsp" %>
 			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 				<a class="navbar-brand" href="#">ToDo</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
