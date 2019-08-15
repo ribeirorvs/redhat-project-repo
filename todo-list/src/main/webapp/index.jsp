@@ -37,6 +37,4 @@
 					</form>
 				</article>
 			</section>
-		</section>
-	</body>
-</html>
+<%@ include file="components/footer.jsp" %>
