@@ -14,7 +14,7 @@ import com.redhat.controller.TaskController;
 import com.redhat.controller.ToDoController;
 
 /**
- * Servlet implementation class ServletController
+ * Servlet implementation class ServletController.
  *
  * @version 2.5 13 Aug 2019
  * @author Rodrigo Vitor Ribeiro
@@ -24,11 +24,17 @@ public class ServletController extends HttpServlet {
     private ToDoController td = new ToDoController();
 
     /**
+     * @param request A request with the parameters that
+     * will used to add the task.
+     * @param response A response that can be used to return the method result,
+     * but is not used in this case.
+     * @throws ServletException Return error from servlet
+     * @throws IOException Return error from IO
      * @see HttpServlet#doGet(HttpServletRequest request,
      * HttpServletResponse response)
      */
     protected void doGet(final HttpServletRequest request,
-                           final HttpServletResponse response) 
+                           final HttpServletResponse response)
                                    throws ServletException, IOException {
         switch (request.getParameter("operation")) {
         case "listTasks":
@@ -47,7 +53,7 @@ public class ServletController extends HttpServlet {
     /**
      * The doPost method that controller what the servlet will do.
      *
-     * @param request A request with the parameters what
+     * @param request A request with the parameters that
      * will used to add the task.
      * @param response A response that can be used to return the method result,
      * but is not used in this case.
