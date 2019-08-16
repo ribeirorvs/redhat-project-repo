@@ -24,11 +24,24 @@ public class ServletController extends HttpServlet {
     private ToDoController td = new ToDoController();
 
     /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     * @see HttpServlet#doGet(HttpServletRequest request,
+     * HttpServletResponse response)
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        response.getWriter().append("Served at: ").append(request.getContextPath());
+    protected void doGet(final HttpServletRequest request,
+                           final HttpServletResponse response) 
+                                   throws ServletException, IOException {
+        switch (request.getParameter("operation")) {
+        case "listTasks":
+            listTasks(request, response, td);
+            break;
+        case "checkTask":
+            checkTask(request, response, td);
+            break;
+        default:
+            break;
+        }
+        RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+        view.forward(request, response);
     }
 
     /**
@@ -42,26 +55,20 @@ public class ServletController extends HttpServlet {
      * @throws IOException Return error from IO
      * @see HttpServletRequest
      * @see HttpServletResponse
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     * @see HttpServlet#doPost(HttpServletRequest request,
+     * HttpServletResponse response)
      */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(final HttpServletRequest request,
+                            final HttpServletResponse response)
+                                    throws ServletException, IOException {
         switch (request.getParameter("operation")) {
         case "addTask":
             addTask(request, response, td);
             break;
-        case "listTasks":
-            listTasks(request, response, td);
-            break;
-        case "checkTask":
-            checkTask(request, response, td);
-            break;
         default:
             break;
         }
-
-        RequestDispatcher view = request.getRequestDispatcher("result.jsp");
-        view.forward(request, response);
-        //doGet(request, response);
+        doGet(request, response);
     }
 
     /**
@@ -83,10 +90,14 @@ public class ServletController extends HttpServlet {
         TaskController t = new TaskController();
         t.setDescription(request.getParameter("task-desc"));
         t.setTitle(request.getParameter("task-title"));
-        t.setStartDay(LocalDate.parse(request.getParameter("task-startDay")));
-        t.setStartTime(LocalTime.parse(request.getParameter("task-startTime")));
-        t.setFinalDay(LocalDate.parse(request.getParameter("task-lastDay")));
-        t.setFinalTime(LocalTime.parse(request.getParameter("task-finalTime")));
+        t.setStartDay(LocalDate.parse(
+                request.getParameter("task-startDay")));
+        t.setStartTime(LocalTime.parse(
+                request.getParameter("task-startTime")));
+        t.setFinalDay(LocalDate.parse(
+                request.getParameter("task-lastDay")));
+        t.setFinalTime(LocalTime.parse(
+                request.getParameter("task-finalTime")));
 
         tmpTd.addTask(t);
 
