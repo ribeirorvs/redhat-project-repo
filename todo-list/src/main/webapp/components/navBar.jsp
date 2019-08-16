@@ -13,6 +13,8 @@
 					Tasks</a></li>
 			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("clearListLink")%>">Clear
 					List</a></li>
+			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("removeTaskLink")%>">Remove
+					Task</a></li>
 		</ul>
 	</section>
 </nav>
