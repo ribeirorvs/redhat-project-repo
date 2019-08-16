@@ -6,6 +6,7 @@
 	<jsp:param value="checktask.jsp" name="checkTaskLink"/>
 	<jsp:param value="#" name="listTaskLink"/>
 	<jsp:param value="clearlist.jsp" name="clearListLink"/>
+	<jsp:param value="removetask.jsp" name="removeTaskLink"/>
 </jsp:include>
 			<section class="row">
 				<header class="col-sm-12">
