@@ -133,7 +133,7 @@ public class ServletController extends HttpServlet {
     }
 
     /**
-     * This method take a Task from the TO DO list.          nbbbnbnbnbnbnbb                    b
+     * This method take a Task from the TO DO list.
      *
      * @param request A request with the parameters what
      * will used to add the task.
@@ -151,7 +151,20 @@ public class ServletController extends HttpServlet {
         request.setAttribute("styles", tmpTd.checkTask(
                 Integer.parseInt(request.getParameter("task-id"))).toString());
     }
-    
+
+    /**
+     * This method clear the TO DO task list.
+     *
+     * @param request A request with the parameters what
+     * will used to add the task.
+     * @param response A response that can be used to return the method result,
+     * but is not used in this case.
+     * @param tmpTd The ToDoController that will be
+     * responsible for add the task.
+     * @see HttpServletRequest
+     * @see HttpServletResponse
+     * @see ToDoController
+     */
     private void clearTasks(final HttpServletRequest request,
             final HttpServletResponse response,
             final ToDoController tmpTd) {
