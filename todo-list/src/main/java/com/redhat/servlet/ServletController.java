@@ -145,7 +145,7 @@ public class ServletController extends HttpServlet {
     private void checkTask(final HttpServletRequest request,
             final HttpServletResponse response,
             final ToDoController tmpTd) {
-        request.setAttribute("style", tmpTd.checkTask(
-                Integer.parseInt(request.getParameter("id"))));
+        request.setAttribute("styles", tmpTd.checkTask(
+                Integer.parseInt(request.getParameter("task-id"))).toString());
     }
 }
