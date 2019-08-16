@@ -74,6 +74,8 @@ public class ServletController extends HttpServlet {
             case "clearList":
                 clearTasks(request, response, td);
                 break;
+            case "removeTask":
+                removeTask(request, response, td);
             default:
                 break;
         }
@@ -169,5 +171,28 @@ public class ServletController extends HttpServlet {
             final HttpServletResponse response,
             final ToDoController tmpTd) {
         tmpTd.clearToDo();
+    }
+
+    /**
+     * This method remove a task from the TO DO task list.
+     *
+     * @param request A request with the parameters what
+     * will used to add the task.
+     * @param response A response that can be used to return the method result,
+     * but is not used in this case.
+     * @param tmpTd The ToDoController that will be
+     * responsible for add the task.
+     * @see HttpServletRequest
+     * @see HttpServletResponse
+     * @see ToDoController
+     */
+    private void removeTask(final HttpServletRequest request,
+            final HttpServletResponse response,
+            final ToDoController tmpTd) {
+        TaskController task = tmpTd.checkTask(
+                Integer.parseInt(request.getParameter("task-id")));
+        if (task != null) {
+            tmpTd.removeTask(task.getId());
+        }
     }
 }
