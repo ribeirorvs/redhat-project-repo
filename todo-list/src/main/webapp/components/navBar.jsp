@@ -11,6 +11,8 @@
 					Task</a></li>
 			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("listTaskLink")%>">List
 					Tasks</a></li>
+			<li class="nav-item"><a class="nav-link" href="<%= request.getParameter("clearListLink")%>">Clear
+					List</a></li>
 		</ul>
 	</section>
 </nav>

@@ -34,17 +34,17 @@ public class ServletController extends HttpServlet {
      * HttpServletResponse response)
      */
     protected void doGet(final HttpServletRequest request,
-                           final HttpServletResponse response)
-                                   throws ServletException, IOException {
+            final HttpServletResponse response)
+                    throws ServletException, IOException {
         switch (request.getParameter("operation")) {
-        case "listTasks":
-            listTasks(request, response, td);
-            break;
-        case "checkTask":
-            checkTask(request, response, td);
-            break;
-        default:
-            break;
+            case "listTasks":
+                listTasks(request, response, td);
+                break;
+            case "checkTask":
+                checkTask(request, response, td);
+                break;
+            default:
+                break;
         }
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request, response);
@@ -65,14 +65,14 @@ public class ServletController extends HttpServlet {
      * HttpServletResponse response)
      */
     protected void doPost(final HttpServletRequest request,
-                            final HttpServletResponse response)
-                                    throws ServletException, IOException {
+            final HttpServletResponse response)
+                    throws ServletException, IOException {
         switch (request.getParameter("operation")) {
-        case "addTask":
-            addTask(request, response, td);
-            break;
-        default:
-            break;
+            case "addTask":
+                addTask(request, response, td);
+                break;
+            default:
+                break;
         }
         doGet(request, response);
     }
@@ -130,7 +130,7 @@ public class ServletController extends HttpServlet {
     }
 
     /**
-     * This method take a Task from the TO DO list.
+     * This method take a Task from the TO DO list.          nbbbnbnbnbnbnbb                    b
      *
      * @param request A request with the parameters what
      * will used to add the task.
@@ -147,5 +147,11 @@ public class ServletController extends HttpServlet {
             final ToDoController tmpTd) {
         request.setAttribute("styles", tmpTd.checkTask(
                 Integer.parseInt(request.getParameter("task-id"))).toString());
+    }
+    
+    private void clearTasks(final HttpServletRequest request,
+            final HttpServletResponse response,
+            final ToDoController tmpTd) {
+        tmpTd.clearToDo();
     }
 }
