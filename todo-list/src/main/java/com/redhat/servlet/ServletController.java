@@ -71,6 +71,9 @@ public class ServletController extends HttpServlet {
             case "addTask":
                 addTask(request, response, td);
                 break;
+            case "clearList":
+                clearTasks(request, response, td);
+                break;
             default:
                 break;
         }

@@ -1,11 +1,11 @@
 <%@ include file="components/head.jsp" %>
 <%@ include file="components/header.jsp" %>
 <jsp:include page="components/navBar.jsp">
-	<jsp:param value="#" name="toDo"/>
-	<jsp:param value="#" name="addTaskLink"/>
+	<jsp:param value="index.jsp" name="toDo"/>
+	<jsp:param value="index.jsp" name="addTaskLink"/>
 	<jsp:param value="checktask.jsp" name="checkTaskLink"/>
 	<jsp:param value="listtasks.jsp" name="listTaskLink"/>
-	<jsp:param value="clearlist.jsp" name="clearListLink"/>
+	<jsp:param value="#" name="clearListLink"/>
 </jsp:include>
 			<section class="row">
 				<header class="col-sm-12">
@@ -14,8 +14,8 @@
 				<article class="col-sm-6">
 					<div class="btn-group">
 						<form action="ClearList.do" method="post">
-							<input type="hidden" name="operation" value="listTasks">
-							<input type="submit" class="btn btn-primary" value="All">
+							<input type="hidden" name="operation" value="clearList">
+							<input type="submit" class="btn btn-primary" value="Clear">
 						</form>
 					</div>
 				</article>
