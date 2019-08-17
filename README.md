@@ -45,7 +45,7 @@ The code reading is improved in all the project, including more comments and fol
 - Remove scripted from JSP
 - Refine Servelet (Done)
 - Improve the code reading (Done)
-- Create the functions Remove and Clear tasks
+- Create the functions Remove and Clear tasks (Done)
 
 ## Project TODO
 
