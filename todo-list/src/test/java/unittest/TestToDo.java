@@ -4,20 +4,34 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.jupiter.api.Test;
-
 import com.redhat.model.Task;
 import com.redhat.model.ToDo;
 
+/**
+ * Test class created to granter the
+ * functionality of the ToDo class.
+ *
+ * @author Rodrigo Vitor Ribeiro
+ */
 class TestToDo {
 
+    /**
+     * Test if a ToDo can be initiated.
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
 	@Test
 	void testToDo() {
 		ToDo td = new ToDo();
 		assertNotNull(td, "ToDo can't be created");
 	}
 
+	/**
+	 * Test if a ToDo can be initiated with a list of Tasks.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testToDoListOfTask() {
 		List<Task> tasks = new ArrayList<Task>();
@@ -29,6 +43,11 @@ class TestToDo {
 		assertNotNull(td);
 	}
 
+	/**
+	 * Test the method getTasks.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testGetTasks() {
 		List<Task> tasks = new ArrayList<Task>();
@@ -40,6 +59,11 @@ class TestToDo {
 		assertEquals(td.getTasks(), tasks, "Error to get Tasks");
 	}
 
+	/**
+	 * Test the method setTasks.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testSetTasks() {
 		List<Task> tasks = new ArrayList<Task>();
@@ -52,6 +76,11 @@ class TestToDo {
 		assertEquals(td.getTasks(), tasks, "Error to set Tasks");
 	}
 
+	/**
+	 * Test the method addTask.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testAddTask() {
 		Task t = new Task();
@@ -61,6 +90,11 @@ class TestToDo {
 		assertEquals(td.getTasks().size(), 1, "Error to add a Task");
 	}
 
+	/**
+	 * Test the method removeTask.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testRemoveTask() {
 		Task t = new Task();
@@ -73,6 +107,11 @@ class TestToDo {
 		assertEquals(td.getTasks().size(), 0, "Error to remove a Task");
 	}
 
+	/**
+	 * Test the method clearToDo.
+	 *
+	 * @author Rodrigo Vitor Ribeiro
+	 */
 	@Test
 	void testClearToDo() {
 		List<Task> tasks = new ArrayList<Task>();
