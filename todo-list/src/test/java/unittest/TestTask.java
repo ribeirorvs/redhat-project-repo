@@ -18,7 +18,7 @@ import com.redhat.model.Task;
 class TestTask {
 
     /**
-     * Test if a Task can be instantiated
+     * Test if a Task can be instantiated.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -29,7 +29,7 @@ class TestTask {
     }
 
     /**
-     * Test if a Task can be instantiated with all parameters
+     * Test if a Task can be instantiated with all parameters.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -51,7 +51,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setStartDay
+     * Test the method setStartDay.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -64,7 +64,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setFinalDay
+     * Test the method setFinalDay.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -77,7 +77,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setStartTime
+     * Test the method setStartTime.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -90,7 +90,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setFinalTime
+     * Test the method setFinalTime.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -103,7 +103,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setTitle
+     * Test the method setTitle.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -115,7 +115,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setDescription
+     * Test the method setDescription.
      *
      * @author Rodrigo Vitor Ribeiro
      */
@@ -127,7 +127,7 @@ class TestTask {
     }
 
     /**
-     * Test the method setId
+     * Test the method setId.
      *
      * @author Rodrigo Vitor Ribeiro
      */
