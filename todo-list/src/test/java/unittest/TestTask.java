@@ -63,6 +63,11 @@ class TestTask {
         assertEquals(t.getStartDay(), day, "Incorret start day");
     }
 
+    /**
+     * Test the method setFinalDay
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetFinalDay() {
         Task t = new Task();
@@ -71,6 +76,11 @@ class TestTask {
         assertEquals(t.getFinalDay(), day, "Incorret final day");
     }
 
+    /**
+     * Test the method setStartTime
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetStartTime() {
         Task t = new Task();
@@ -79,6 +89,11 @@ class TestTask {
         assertEquals(t.getStartTime(), time, "Incorret start time");
     }
 
+    /**
+     * Test the method setFinalTime
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetFinalTime() {
         Task t = new Task();
@@ -87,6 +102,11 @@ class TestTask {
         assertEquals(t.getFinalTime(), time, "Incorret final time");
     }
 
+    /**
+     * Test the method setTitle
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetTitle() {
         Task t = new Task();
@@ -94,6 +114,11 @@ class TestTask {
         assertEquals(t.getTitle(), "Task title", "Incorrect title");
     }
 
+    /**
+     * Test the method setDescription
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetDescription() {
         Task t = new Task();
@@ -101,11 +126,15 @@ class TestTask {
         assertEquals(t.getDescription(), "Task description", "Incorrect decription");
     }
 
+    /**
+     * Test the method setId
+     *
+     * @author Rodrigo Vitor Ribeiro
+     */
     @Test
     void testSetId() {
         Task t = new Task();
         t.setId(1000);
         assertEquals(t.getId(), 1000, "");
     }
-
 }
