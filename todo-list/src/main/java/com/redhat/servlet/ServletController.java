@@ -21,7 +21,7 @@ import com.redhat.controller.ToDoController;
  */
 public class ServletController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private ToDoController td = new ToDoController();
+    private final ToDoController td = new ToDoController();
 
     /**
      * @param request A request with the parameters that
