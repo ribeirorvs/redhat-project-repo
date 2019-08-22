@@ -7,7 +7,7 @@
 	<groupId>com.redhat</groupId>
 	<artifactId>todo-list</artifactId>
 	<packaging>war</packaging>
-	<version>2.3.1</version>
+	<version>2.5</version>
 	<name>ToDo List</name>
 	<description>A simple ToDo list web based.</description>
 	<url>https://github.com/mkspcd/MavenArchetypes</url>
@@ -63,28 +63,6 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>2.3</version>
-			</plugin>
 		</plugins>
 	</build>
-
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>3.1.0</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>checkstyle</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
 </project>
