@@ -9,6 +9,9 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -77,7 +80,8 @@ public class ToDoRest {
             return builder.build();
         } catch (URISyntaxException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            Logger logger = Logger.getLogger(ToDoRest.class.getName());
+            logger.log(Level.WARNING, e.getStackTrace().toString());
             return null;
         }
     }
