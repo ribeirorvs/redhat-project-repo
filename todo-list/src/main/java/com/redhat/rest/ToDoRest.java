@@ -70,16 +70,16 @@ public class ToDoRest {
                 title,
                 desc);
         todoList.addTask(task);
-        ResponseBuilder builder = null;
+        //ResponseBuilder builder = null;
 
         try {
-            builder = Response.seeOther(new URI("../"));
+            ResponseBuilder builder = Response.seeOther(new URI("../"));
+            return builder.build();
         } catch (URISyntaxException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            return null;
         }
-
-        return builder.build();
     }
 
     /**
