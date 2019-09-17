@@ -1,3 +1,5 @@
+# THIS PROJECT WAS STOPED FOR WHILE
+
 # Java EE Application with Red Hat Products
 
 ## About this repository
